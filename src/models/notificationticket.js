@@ -15,11 +15,12 @@ module.exports = (sequelize, DataTypes) => {
     {
       subject: { type: DataTypes.STRING, allowNull: false },
       content: { type: DataTypes.STRING, allowNull: false },
-      recepientEmail: { type: DataTypes.STRING, allowNull: false },
+      recipientEmail: { type: DataTypes.STRING, allowNull: false },
       status: {
         type: DataTypes.ENUM,
         allowNull: false,
         values: ["SUCCESS", "FAILED", "PENDING"],
+        defaultValue: "PENDING"
       },
       notificationTime: { type: DataTypes.DATE, allowNull: false },
     },
